@@ -34,7 +34,7 @@ class PostController extends Controller
      * @param CheckPostRequest $request
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function create(Request $request) {
+    public function create(CheckPostRequest $request) {
         $user = Auth::user();
         $data = $request->all();
         $data['user_id'] = $user->id;
